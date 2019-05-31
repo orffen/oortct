@@ -1,2 +1,1 @@
-# oortct
-Orffen's Referee Toolbox for Classic Traveller
+# Orffen's Referee Toolbox for Classic Traveller
