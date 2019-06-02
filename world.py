@@ -148,9 +148,9 @@ class World(object):
         return max(0, min(result, 12))
 
     def _generate_hydrographics(self):
-        if self.size in (0, 1):
+        if self.size == 0:
             return 0
-        result = roll(2) + self.size
+        result = roll(2) - 7 + self.atmosphere
         if self.atmosphere < 2 or self.atmosphere > 9:
             result -= 4
         return max(0, min(result, 10))
