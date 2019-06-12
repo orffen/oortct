@@ -20,6 +20,7 @@
 # SOFTWARE.
 
 import csv
+import os
 import random
 from roll import roll
 from uwp import UWP
@@ -170,7 +171,8 @@ class World(object):
                    str(self.government))
         modifiers = []
         result = roll()
-        with open('tech_level.csv') as file:
+        _tl = os.path.join(os.path.dirname(__file__), 'tech_level.csv')
+        with open(_tl, 'r') as file:
             tl = csv.DictReader(file, dialect='excel')
             for row in tl:
                 modifiers.append(row)
